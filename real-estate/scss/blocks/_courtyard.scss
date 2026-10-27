@@ -1,0 +1,314 @@
+.courtyard {
+  padding-bottom: 120px;
+
+  @include vp-1023 {
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1548px) {
+    padding-bottom: 80px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 60px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 700px 668px;
+
+    @include vp-1023 {
+      grid-template-columns: repeat(2, 340px);
+      gap: 48px;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1548px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 48px;
+    }
+
+    @include vp-767 {
+      display: block;
+    }
+  }
+
+  &__media {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+
+    @include vp-1023 {
+      height: 340px;
+      margin-top: 15px;
+      aspect-ratio: auto;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1548px) {
+      height: auto;
+      margin-top: 15px;
+      aspect-ratio: 1;
+    }
+
+    @include vp-767 {
+      height: 335px;
+      margin-top: 0;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    width: 495px;
+    margin-left: 173px;
+    padding-top: 109px;
+
+    @include vp-1023 {
+      width: 340px;
+      margin-left: 0;
+      padding-top: 0;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1548px) {
+      width: 100%;
+      margin-left: 0;
+      padding-top: 0;
+    }
+
+    @include vp-767 {
+      width: 335px;
+      padding-top: 40px;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    max-width: 440px;
+    margin: 0;
+    font-family: $ff-tenor;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 44px;
+    letter-spacing: -2.72px;
+    text-transform: uppercase;
+    color: $color-fallow;
+
+    @include vp-1023 {
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: -1.92px;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1199px) {
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: -1.92px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: -1.6px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 30px 0 0;
+    padding: 0;
+    list-style: none;
+
+    @include vp-1023 {
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1199px) {
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    @include vp-767 {
+      margin-top: 15px;
+    }
+    
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 15px;
+    font-family: $ff-roboto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: $color-white;
+
+    @include vp-1023 {
+      padding-left: 14px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $color-fallow;
+      content: "";
+
+      @include vp-1023 {
+        top: 7px;
+      }
+    }
+
+    @media (min-width: 1024px) and (max-width: 1199px) {
+      padding-left: 14px;
+      font-size: 14px;
+      line-height: 20px;
+
+      &::before {
+        top: 7px;
+      }
+    }
+  }
+
+  &__stat {
+    position: relative;
+    margin-top: 120px;
+    text-align: center;
+
+    @include vp-1023 {
+      margin-top: 80px;
+    }
+
+    @include vp-767 {
+      margin-top: 60px;
+    }
+  }
+
+  &__stat-value {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+    color: $color-fallow;
+
+    @include vp-1023 {
+      gap: 5px;
+    }
+  }
+
+  &__stat-number {
+    font-family: $ff-tenor;
+    font-weight: 400;
+    font-size: 140px;
+    line-height: 100px;
+    letter-spacing: -5.6px;
+
+    @include vp-1023 {
+      font-size: 90px;
+      line-height: 70px;
+      letter-spacing: -3.6px;
+    }
+
+    @include vp-767 {
+      font-size: 70px;
+      line-height: 50px;
+      letter-spacing: -2.8px;
+    }
+  }
+
+  &__stat-unit {
+    margin-top: 64px;
+    font-family: $ff-tenor;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 44px;
+
+    @include vp-1023 {
+      margin-top: 21px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    @include vp-767 {
+      margin-top: 34px;
+    }
+  }
+
+  &__stat-label {
+    margin: 22px 0 0;
+    font-family: $ff-roboto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: $color-white;
+
+    @include vp-1023 {
+      margin-top: 20px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__stat-line {
+    position: absolute;
+    top: 42px;
+    width: calc(50% - 190px);
+    height: 1px;
+    background-color: $color-fallow;
+
+    @include vp-1023 {
+      top: 35px;
+      width: calc(50% - 103px);
+    }
+
+    @include vp-767 {
+      top: 25px;
+      width: 90px;
+    }
+
+    &::after {
+      position: absolute;
+      top: -4px;
+      width: 7px;
+      height: 7px;
+      border-top: 1px solid $color-fallow;
+      border-right: 1px solid $color-fallow;
+      content: "";
+    }
+
+    &--left {
+      left: 0;
+
+      &::after {
+        left: 0;
+        transform: rotate(-135deg);
+      }
+    }
+
+    &--right {
+      right: 0;
+
+      &::after {
+        right: 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+}

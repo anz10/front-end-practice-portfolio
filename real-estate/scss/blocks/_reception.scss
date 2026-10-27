@@ -1,0 +1,26 @@
+.reception {
+  width: 100%;
+  aspect-ratio: 1728 / 500;
+  overflow: hidden;
+
+  @include vp-1023 {
+    height: 280px;
+    aspect-ratio: auto;
+  }
+
+  @include vp-767 {
+    height: 200px;
+  }
+
+  &__picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

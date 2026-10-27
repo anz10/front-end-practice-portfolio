@@ -1,0 +1,66 @@
+.blog-filter {
+
+  &__form {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__list {
+    border-top: 1px solid $color-black;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 28px 0 0;
+
+    @include vp-1023 {
+      gap: 12px;
+      padding-top: 32px;
+    }
+  }
+
+  &__label {
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid $color-dim-gray;
+    border-radius: 4px;
+    color: $color-dim-gray;
+    cursor: pointer;
+    display: flex;
+    font-size: 12px;
+    font-weight: 400;
+    justify-content: center;
+    line-height: 14px;
+    padding: 8px 10px;
+    transition: background-color $transition-300,
+    color $transition-300,
+    border-color $transition-300;
+
+    @include vp-1023 {
+      padding: 7px 9px;
+    }
+
+    &:hover {
+      color: $color-blue;
+      border-color: $color-blue;
+    }
+  }
+    &__checkbox:checked + &__label {
+    color: $color-blue;
+    border-color: $color-blue;
+  }
+
+  &__checkbox:focus-visible + &__label {
+    outline: 2px solid $color-blue;
+    outline-offset: 2px;
+  }
+}
+
+

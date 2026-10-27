@@ -1,0 +1,105 @@
+.cookie {
+  @include vp-360 {
+    position: sticky;
+    bottom: 20px;
+    z-index: 30;
+    width: calc(100% - 30px);
+    max-width: 330px;
+    min-height: 96px;
+    margin: -116px auto 20px;
+    padding: 12px 68px 12px 12px;
+    background-color: $color-white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba($color-volcan, 0.2);
+  }
+
+  @include vp-768 {
+    width: 380px;
+    max-width: 380px;
+    min-height: 116px;
+    margin: -136px 20px 20px auto;
+    padding: 16px 80px 16px 16px;
+  }
+
+  @include vp-1024 {
+    bottom: 0;
+    min-height: 144px;
+    margin: -144px 20px 0 auto;
+  }
+
+  @include vp-1304 {
+    margin: -164px 20px 20px auto;
+  }
+
+  &__text {
+    @include vp-360 {
+      margin: 0;
+      font-size: 10px;
+      line-height: 12px;
+      color: $color-black-russian;
+    }
+
+    @include vp-768 {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    @include vp-1024 {
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+
+  &__link {
+    @include vp-360 {
+      color: $color-royal-blue-1;
+    }
+  }
+
+  &__close {
+    @include vp-360 {
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      padding: 0;
+      color: $color-storm-grey-1;
+      border: none;
+      background-color: transparent;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    @include vp-768 {
+      right: 20px;
+      width: 24px;
+      height: 24px;
+    }
+
+    &::before {
+      @include vp-360 {
+        position: absolute;
+        top: 50%;
+        right: 35px;
+        width: 1px;
+        height: 72px;
+        content: "";
+        background-color: $color-solitude-3;
+        transform: translateY(-50%);
+      }
+
+      @include vp-768 {
+        right: 43px;
+        height: 84px;
+      }
+
+      @include vp-1024 {
+        height: 108px;
+      }
+    }
+  }
+}

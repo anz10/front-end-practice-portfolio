@@ -1,0 +1,297 @@
+.project-intro {
+  padding: 120px 0;
+
+  @include vp-1023 {
+    padding: 80px 0 0;
+  }
+
+  @include vp-767 {
+    padding-top: 60px;
+  }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        @media (max-width: 1199px) {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @include vp-1023 {
+          grid-template-columns: repeat(2, 266px);
+          justify-content: center;
+        }
+
+        @include vp-767 {
+          grid-template-columns: 220px;
+        }
+    }
+
+    &__media {
+        aspect-ratio: 456 / 600;
+        overflow: hidden;
+        border-radius: 0 0 228px 228px;
+
+        @include vp-1023 {
+          height: 350px;
+          aspect-ratio: auto;
+        }
+
+        @include vp-767 {
+          height: 290px;
+          border-radius: 0 0 110px 110px;
+        }
+    }
+
+    &__media--right {
+        @media (max-width: 1199px) {
+          display: none;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__picture {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        aspect-ratio: 456 / 600;
+        padding: 91px 37px;
+        border-color: $color-fallow;
+        border-style: solid;
+        border-width: 1px 1px 0 1px;
+        border-radius: 600px 600px 0 0;
+        overflow: hidden;
+        text-align: center;
+
+        @media (max-width: 1519px) {
+          padding:
+            clamp(38px, calc(16.5625vw - 160.75px), 91px)
+            clamp(13px, calc(7.5vw - 77px), 37px);
+        }
+
+        @include vp-1023 {
+          height: 350px;
+          padding: 38px 13px 0;
+          aspect-ratio: auto;
+        }
+
+        @include vp-767 {
+          height: 290px;
+          padding: 24px 10px 0;
+          border-radius: 300px 300px 0 0;
+        }
+    }
+
+    &__blazon {
+        display: block;
+        flex-shrink: 0;
+        width: 110px;
+        height: 146px;
+        margin: 0 0 28px;
+
+        @media (max-width: 1519px) {
+          width: clamp(70px, calc(12.5vw - 80px), 110px);
+          height: clamp(94px, calc(16.25vw - 101px), 146px);
+          margin-bottom: clamp(20px, calc(2.5vw - 10px), 28px);
+        }
+
+        @include vp-1023 {
+          width: 70px;
+          height: 94px;
+          margin-bottom: 20px;
+        }
+
+        @include vp-767 {
+          width: 60px;
+          height: 80px;
+        }
+    }
+
+    &__caption {
+        margin: 0 0 10px;
+        font-family: $ff-roboto;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 3.6px;
+        text-transform: uppercase;
+        color: $color-fallow;
+
+        @media (max-width: 1519px) {
+          margin-bottom: clamp(5px, calc(1.5625vw - 13.75px), 10px);
+          font-size: clamp(14px, calc(1.25vw - 1px), 18px);
+          line-height: clamp(20px, calc(1.875vw - 2.5px), 26px);
+          letter-spacing: clamp(2.8px, calc(0.25vw - 0.2px), 3.6px);
+        }
+
+        @include vp-1023 {
+          margin-bottom: 5px;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 2.8px;
+        }
+
+        @include vp-767 {
+          margin-bottom: 10px;
+          font-size: 10px;
+          line-height: 14px;
+          letter-spacing: 2px;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        font-family: $ff-tenor;
+        font-weight: 400;
+        font-size: 44px;
+        line-height: 50px;
+        letter-spacing: -3.52px;
+        text-transform: uppercase;
+        color: $color-white;
+
+        @media (max-width: 1519px) {
+          font-size: clamp(28px, calc(5vw - 32px), 44px);
+          line-height: clamp(32px, calc(5.625vw - 35.5px), 50px);
+          letter-spacing: clamp(-3.52px, calc(-0.4vw + 2.56px), -2.24px);
+        }
+
+        @include vp-1023 {
+          font-size: 28px;
+          line-height: 32px;
+          letter-spacing: -2.24px;
+        }
+
+        @include vp-767 {
+          font-size: 24px;
+          line-height: 28px;
+          letter-spacing: -1.92px;
+        }
+    }
+
+    &__location {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        margin-top: 40px;
+
+        @media (max-width: 1519px) {
+          gap: clamp(10px, calc(2.5vw - 20px), 18px);
+          margin-top: clamp(20px, calc(6.25vw - 55px), 40px);
+        }
+
+        @include vp-1023 {
+          gap: 10px;
+          margin-top: 20px;
+        }
+
+        @include vp-767 {
+          gap: 5px;
+          margin-top: 15px;
+        }
+    }
+
+    &__location-icon {
+        width: 17px;
+        height: 23px;
+        flex-shrink: 0;
+
+        @include vp-1023 {
+          width: 20px;
+          height: 20px;
+        }
+    }
+
+    &__address {
+        margin: 0;
+        font-family: $ff-roboto;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        font-style: normal;
+        color: $color-white;
+
+        @media (max-width: 1519px) {
+          font-size: clamp(14px, calc(1.25vw - 1px), 18px);
+          line-height: clamp(20px, calc(1.875vw - 2.5px), 26px);
+        }
+
+        @include vp-1023 {
+          font-size: 14px;
+          line-height: 20px;
+        }
+    }
+
+    &__description {
+        margin: 120px 0 0;
+        font-family: $ff-tenor;
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 44px;
+        letter-spacing: -2.72px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-fallow;
+        width: 100%;
+
+        @include vp-1023 {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          min-height: 120px;
+          margin-top: 80px;
+          font-size: 24px;
+          line-height: 30px;
+          letter-spacing: -1.92px;
+        }
+
+        @include vp-767 {
+          min-height: 144px;
+          margin-top: 60px;
+          font-size: 20px;
+          line-height: 24px;
+          letter-spacing: -1.6px;
+        }
+    }
+
+        &__panorama {
+        width: 100%;
+        aspect-ratio: 1728 / 740;
+        margin-top: 164px;
+        overflow: hidden;
+
+        @include vp-1023 {
+          height: 460px;
+          margin-top: 80px;
+          aspect-ratio: auto;
+        }
+
+        @include vp-767 {
+          height: 300px;
+          margin-top: 60px;
+        }
+    }
+
+    &__panorama-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__panorama-picture {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -1,0 +1,368 @@
+.infrastructure {
+  padding: 0 0 120px;
+
+  @include vp-1023 {
+    padding: 80px 0;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1548px) {
+    padding: 80px 0;
+  }
+
+  @include vp-767 {
+    padding: 60px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include vp-1023 {
+      flex-direction: column;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1548px) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    width: 800px;
+    max-width: 800px;
+    padding-top: 162px;
+
+    @include vp-1023 {
+      width: 100%;
+      max-width: none;
+      padding-top: 0;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1548px) {
+      width: 100%;
+      max-width: none;
+      padding-top: 0;
+    }
+  }
+
+  &__lead {
+    margin: 0;
+    font-family: $ff-roboto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: $color-white;
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__lists {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    margin-top: 30px;
+
+    @include vp-1023 {
+      grid-template-columns: repeat(2, 334px);
+      gap: 60px;
+      margin-top: 20px;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1548px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 60px;
+      margin-top: 20px;
+    }
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+      grid-template-rows: 230px 260px;
+      gap: 10px;
+      margin-top: 15px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include vp-1023 {
+      gap: 10px;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1199px) {
+      gap: 10px;
+    }
+
+    @include vp-767 {
+      display: grid;
+    }
+
+    &--primary {
+      @include vp-767 {
+        grid-template-rows: 40px 60px 40px 60px;
+      }
+    }
+
+    &--secondary {
+      @include vp-767 {
+        grid-template-rows: 20px 60px 80px 20px 40px;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 16px;
+    font-family: $ff-roboto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: $color-white;
+
+    @include vp-1023 {
+      padding-left: 14px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $color-fallow;
+      content: "";
+
+      @include vp-1023 {
+        top: 7px;
+      }
+    }
+
+    @media (min-width: 1024px) and (max-width: 1199px) {
+      padding-left: 14px;
+      font-size: 14px;
+      line-height: 20px;
+
+      &::before {
+        top: 7px;
+      }
+    }
+  }
+
+  &__facts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    width: 400px;
+    max-width: 400px;
+    aspect-ratio: 4 / 7;
+    padding: 99px 30px 0;
+    border: 1px solid $color-fallow;
+    border-bottom: 0;
+    border-radius: 600px 600px 0 0;
+    text-align: center;
+
+    @include vp-1023 {
+      display: grid;
+      grid-template-columns: repeat(4, 150px);
+      align-items: start;
+      justify-content: space-between;
+      gap: 0;
+      width: 720px;
+      max-width: none;
+      height: 150px;
+      margin: 80px auto 0;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      aspect-ratio: auto;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1548px) {
+      display: grid;
+      grid-template-columns: repeat(4, 150px);
+      align-items: start;
+      justify-content: space-between;
+      gap: 0;
+      width: 100%;
+      max-width: 720px;
+      height: 150px;
+      margin: 80px auto 0;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      aspect-ratio: auto;
+    }
+
+    @include vp-767 {
+      grid-template-columns: repeat(2, 120px);
+      grid-template-rows: 126px 146px;
+      column-gap: 40px;
+      row-gap: 20px;
+      justify-content: initial;
+      width: 280px;
+      height: 292px;
+      margin-top: 60px;
+    }
+  }
+
+  &__fact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__fact--park {
+    @include vp-767 {
+      padding-top: 50px;
+    }
+  }
+
+  &__fact--pool {
+    @media (min-width: 1024px) and (max-width: 1548px) {
+      padding-top: 20px;
+    }
+
+    @include vp-1023 {
+      padding-top: 20px;
+    }
+
+    @include vp-767 {
+      padding-top: 0;
+    }
+  }
+
+  &__fact--apartments {
+    @media (min-width: 1024px) and (max-width: 1548px) {
+      padding-top: 80px;
+    }
+
+    @include vp-1023 {
+      padding-top: 80px;
+    }
+
+    @include vp-767 {
+      padding-top: 0;
+    }
+  }
+
+  &__value {
+    margin: 0 0 10px;
+    font-family: $ff-tenor;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 48px;
+    color: $color-fallow;
+
+    @include vp-1023 {
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1548px) {
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 0;
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+
+  &__unit {
+    font-size: 20px;
+    line-height: 24px;
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1548px) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  &__label {
+    margin: 0;
+    font-family: $ff-roboto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: $color-white;
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1548px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include vp-767 {
+      width: 120px;
+    }
+  }
+
+  &__fact-icon {
+    display: none;
+
+    @include vp-1023 {
+      display: block;
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1548px) {
+      display: block;
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+    }
+
+    &--waves {
+      @media (min-width: 1024px) and (max-width: 1548px) {
+        margin-bottom: 20px;
+      }
+
+      @include vp-1023 {
+        margin-bottom: 20px;
+      }
+
+      @include vp-767 {
+        margin-bottom: 10px;
+      }
+    }
+
+    &--playground {
+      @media (min-width: 1024px) and (max-width: 1548px) {
+        margin-top: 20px;
+      }
+
+      @include vp-1023 {
+        margin-top: 20px;
+      }
+
+      @include vp-767 {
+        margin-top: 10px;
+      }
+    }
+  }
+
+}

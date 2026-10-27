@@ -1,0 +1,160 @@
+.architecture {
+  padding-bottom: 120px;
+
+  @include vp-1023 {
+    padding-bottom: 80px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 60px;
+    overflow: hidden;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+
+    @include vp-1023 {
+      padding-bottom: 20px;
+    }
+
+    @include vp-767 {
+      display: block;
+      padding-bottom: 40px;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+    font-family: $ff-tenor;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 44px;
+    letter-spacing: -2.72px;
+    text-transform: uppercase;
+    color: $color-fallow;
+
+    @include vp-1023 {
+      max-width: 230px;
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: -1.92px;
+    }
+
+    @include vp-767 {
+      max-width: 295px;
+      margin: 0 auto;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: -1.6px;
+    }
+  }
+
+  &__description {
+    width: 100%;
+    max-width: 398px;
+    margin: 18px 0 0;
+    font-family: $ff-roboto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: $color-white;
+
+    @include vp-1023 {
+      max-width: 230px;
+      margin-top: 15px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include vp-767 {
+      max-width: 295px;
+      margin: 15px auto 0;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 84px;
+
+    @include vp-1023 {
+      grid-template-columns: repeat(3, 230px);
+      gap: 19px;
+    }
+
+    @include vp-767 {
+      grid-template-columns: repeat(3, 160px);
+      gap: 10px;
+      width: max-content;
+    }
+  }
+
+  &__item {
+    margin: 0;
+  }
+
+  &__media {
+    width: 100%;
+    aspect-ratio: 4 / 7;
+    overflow: hidden;
+
+    @include vp-1023 {
+      height: 410px;
+      aspect-ratio: auto;
+    }
+
+    @include vp-767 {
+      height: 285px;
+    }
+
+    &--top-rounded {
+      border-radius: 600px 600px 0 0;
+    }
+
+    &--bottom-rounded {
+      border-radius: 0 0 600px 600px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__caption {
+    width: 100%;
+    margin-top: 20px;
+    font-family: $ff-tenor;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: -1.6px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-fallow;
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: -1.12px;
+    }
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: -0.96px;
+    }
+  }
+}

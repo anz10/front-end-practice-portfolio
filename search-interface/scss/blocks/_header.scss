@@ -1,0 +1,356 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 15px 0;
+  background-color: $color-white;
+
+  @include vp-768 {
+    padding: 20px 0;
+  }
+
+  @include vp-1024 {
+    padding: 16px 0;
+    background-color: $color-solitude-2;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon-decor {
+    display: none;
+    width: 24px;
+    height: 24px;
+    margin: 0 24px 0 0;
+
+    @include vp-1024 {
+      display: block;
+    }
+  }
+
+  &__logo-link {
+    display: flex;
+    margin: 0 auto 0 0;
+    color: $color-royal-blue-1;
+
+    @include vp-768 {
+      margin: 0 40px 0 0;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: $color-free-speech-blue;
+    }
+  }
+
+  &__logo-image {
+    @include vp-1024 {
+      width: 170px;
+      height: 36px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+
+    &:first-of-type {
+      margin: 0 auto 0 0;
+    }
+
+    &:last-of-type {
+      @include vp-1024 {
+        margin: 0 8px 0 0;
+      }
+    }
+  }
+
+  &__link {
+    display: none;
+    padding: 0;
+    margin: 0 20px 0 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      color: $color-royal-blue-1;
+    }
+
+    @include vp-1024 {
+      display: flex;
+    }
+
+    &--light {
+      color: $color-storm-grey-1;
+
+      &:last-child {
+        margin: 0 auto 0 0;
+      }
+
+      &:hover,
+      &:focus-visible,
+      &:active {
+        color: $color-black-russian;
+      }
+
+      @include vp-1024 {
+        display: none;
+      }
+
+      @include vp-1304 {
+        display: flex;
+      }
+    }
+
+    &--active {
+      color: $color-royal-blue-1;
+
+      &:hover,
+      &:focus-visible {
+        color: $color-royal-blue-2;
+      }
+    }
+  }
+
+  &__search {
+    margin: 0 20px 0 0;
+
+  .btn-icon__icon {
+    width: 18px;
+    height: 18px;
+  }
+
+    @include vp-1024 {
+      margin: 0 28px 0 0;
+    }
+  }
+
+  .header__login {
+    display: none;
+
+    @include vp-1024 {
+      display: flex;
+      margin: 0 16px 0 0;
+    }
+  }
+
+  &__search-panel {
+    display: none;
+  }
+
+  &--search-opened {
+    @include vp-360 {
+      z-index: 20;
+      padding-bottom: 40px;
+      border-radius: 0 0 24px 24px;
+      box-shadow: 0 100vh 0 100vh $color-black-russian-2;
+    }
+
+    @include vp-1024 {
+      padding-bottom: 40px;
+      border-radius: 0 0 40px 40px;
+      box-shadow: 0 100vh 0 100vh $color-black-russian-2;
+    }
+
+    @include vp-1304 {
+      padding-bottom: 60px;
+    }
+  }
+
+  &--search-opened::before {
+    @include vp-1024 {
+      position: absolute;
+      top: 72px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: $color-white;
+      border-radius: 0 0 40px 40px;
+      content: "";
+    }
+  }
+
+  &--search-opened > .container {
+    @include vp-1024 {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &--search-opened &__wrapper {
+    @include vp-768 {
+      position: relative;
+    }
+  }
+
+  &--search-opened &__wrapper::after {
+    @include vp-768 {
+      position: absolute;
+      right: 50%;
+      bottom: -20px;
+      width: 100vw;
+      height: 1px;
+      background-color: $color-hawkes-blue;
+      transform: translateX(50%);
+      content: "";
+    }
+
+    @include vp-1024 {
+      display: none;
+    }
+  }
+
+  &--search-opened &__search-panel {
+    @include vp-360 {
+      display: block;
+      margin: 40px 0 0;
+    }
+
+    @include vp-768 {
+      margin-top: 60px;
+    }
+
+    @include vp-1024 {
+      display: block;
+      margin-top: 56px;
+    }
+
+    @include vp-1304 {
+      margin-top: 76px;
+    }
+  }
+
+  &__search-form {
+    @include vp-1024 {
+      display: flex;
+      gap: 16px;
+    }
+  }
+
+  &__search-inner {
+    @include vp-360 {
+      position: relative;
+    }
+
+    @include vp-1024 {
+      flex-grow: 1;
+      min-width: 0;
+    }
+  }
+
+  &__search-button.btn {
+    display: none;
+
+    @include vp-1024 {
+      display: flex;
+      flex-shrink: 0;
+      width: 110px;
+      min-height: 56px;
+    }
+  }
+
+  &__search-field {
+    @include vp-360 {
+      width: 100%;
+      min-height: 52px;
+      padding: 14px 80px 14px 16px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      color: $color-black-russian;
+      border: 1px solid #cccfde;
+      border-radius: 8px;
+    }
+
+    @include vp-768 {
+      min-height: 56px;
+      padding: 18px 80px 18px 20px;
+    }
+  }
+
+  &__search-clear,
+  &__search-submit {
+    @include vp-360 {
+      position: absolute;
+      top: 50%;
+      padding: 0;
+      border: none;
+      background: none;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__search-clear {
+    @include vp-360 {
+      right: 49px;
+    }
+
+    @include vp-768 {
+      right: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__search-submit {
+    @include vp-360 {
+      right: 16px;
+    }
+
+    @include vp-768 {
+      right: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__search-tags {
+    @include vp-360 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 20px 0 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    @include vp-768 {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__search-tag {
+    @include vp-360 {
+      display: block;
+      padding: 12px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      color: $color-black-russian;
+      background-color: $color-lavander;
+      border-radius: 8px;
+    }
+
+    @include vp-768 {
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+}
